@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Afzal Hussain — Data Science &amp; AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0e11;
+  --bg-soft:#14161a;
+  --line:#23262d;
+  --text:#e9e6e1;
+  --muted:#9b9a96;
+  --accent:#e2703a;
+  --accent-soft:rgba(226,112,58,.12);
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --max:940px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--sans);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:none}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;margin:0}
+.eyebrow{
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:18px;font-weight:500;
+}
+.hero{padding:76px 0 60px}
+.hero .tag{
+  display:inline-block;font-size:12px;letter-spacing:.06em;color:var(--accent);
+  background:var(--accent-soft);border:1px solid rgba(226,112,58,.25);
+  padding:5px 12px;border-radius:999px;margin-bottom:26px;
+}
+.hero h1{font-size:clamp(2.4rem,8vw,4.1rem);line-height:1.05}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{font-size:clamp(1rem,3.4vw,1.15rem);color:var(--muted);max-width:56ch;margin:22px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{
+  display:inline-block;padding:11px 20px;border-radius:8px;text-decoration:none;
+  font-size:14px;font-weight:500;border:1px solid var(--line);transition:.18s;
+}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#14100d}
+.btn:hover{transform:translateY(-1px);border-color:var(--accent)}
+.grid{display:grid;gap:18px}
+@media(min-width:720px){.grid.two{grid-template-columns:1fr 1fr}}
+.card{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;
+  padding:22px;transition:.2s;
+}
+.card:hover{border-color:#34383f;transform:translateY(-2px)}
+.card h3{font-size:1.2rem;margin-bottom:6px}
+.card .stack{font-size:12.5px;color:var(--accent);letter-spacing:.02em;margin-bottom:10px}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.card .link{display:inline-block;margin-top:14px;font-size:13px;color:var(--text);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:1px}
+h2.section-title{font-size:clamp(1.7rem,5vw,2.2rem);margin-bottom:10px}
+.lede{color:var(--muted);max-width:60ch;margin:0 0 28px;font-size:15.5px}
+.skills{display:grid;gap:14px}
+.skillrow{display:grid;grid-template-columns:1fr;gap:4px;padding:14px 0;border-bottom:1px dashed var(--line)}
+@media(min-width:720px){.skillrow{grid-template-columns:150px 1fr;gap:16px;align-items:baseline}}
+.skillrow b{font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.skillrow span{font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px dashed var(--line);border-radius:999px;padding:7px 15px;font-size:13.5px;color:var(--muted)}
+.feature{display:grid;gap:22px}
+@media(min-width:760px){.feature{grid-template-columns:1fr 1fr;gap:40px}}
+.feature ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px}
+.feature li{margin-bottom:8px}
+.edu{border-left:2px solid var(--line);padding-left:20px}
+.edu .item{margin-bottom:22px;position:relative}
+.edu .item::before{content:"";position:absolute;left:-26px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.edu h3{font-size:1.1rem}
+.edu .meta{font-size:13px;color:var(--muted)}
+.contacts{display:grid;gap:10px;margin-bottom:28px}
+.contacts a{display:flex;justify-content:space-between;gap:14px;text-decoration:none;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
+.contacts a span:last-child{color:var(--muted);font-size:14px}
+.contacts a:hover span:last-child{color:var(--accent)}
+form{display:grid;gap:12px;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:22px}
+label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+input,textarea{
+  width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;
+  color:var(--text);font-family:var(--sans);font-size:15px;padding:11px 13px;
+}
+input:focus,textarea:focus{outline:none;border-color:var(--accent)}
+textarea{min-height:110px;resize:vertical}
+button{
+  justify-self:start;background:var(--accent);color:#14100d;border:none;border-radius:8px;
+  padding:11px 22px;font-family:var(--sans);font-size:14px;font-weight:600;cursor:pointer;
+}
+.note{font-size:12.5px;color:var(--muted);margin:0}
+footer{padding:36px 0 54px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<header class="wrap hero">
+  <span class="tag">Open to AI / ML internships &amp; roles</span>
+  <h1>Afzal Hussain —<br>I build <em>things that learn</em>.</h1>
+  <p>Final-year Data Science &amp; AI undergraduate at IIT Guwahati. I work on machine learning systems end to end — from messy data to trained models to something you can actually click on. Off the keyboard, I teach, and I make short films about studying well.</p>
+  <div class="cta">
+    <a class="btn primary" href="#projects">See the work</a>
+    <a class="btn" href="#contact">Get in touch</a>
+    <a class="btn" href="https://github.com/Afzu01" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap" id="projects">
+  <p class="eyebrow">Built &amp; shipped</p>
+  <h2 class="section-title">Projects</h2>
+  <p class="lede">Four systems I've built from scratch — retrieval, tabular ML, speech and vision.</p>
+  <div class="grid two">
+
+    <article class="card">
+      <h3>Finance RAG Pipeline</h3>
+      <div class="stack">LangChain · ChromaDB · Python</div>
+      <p>A retrieval-augmented question answering pipeline over financial documents: chunking, embedding-based retrieval from a vector store, and an LLM answer stage. Built as the first piece of a larger multi-agent orchestration system.</p>
+      <a class="link" href="https://github.com/Afzu01/finance-rag" target="_blank" rel="noopener">View repository →</a>
+    </article>
+
+    <article class="card">
+      <h3>Health Data Classification — NHANES</h3>
+      <div class="stack">XGBoost · LightGBM · CatBoost · Optuna · SHAP</div>
+      <p>A binary classification pipeline on NHANES health survey data, built during the Summer Analytics 2026 Hackathon (IITG Consulting &amp; Analytics Club). Class imbalance handled with SMOTE, tuning with Optuna, three boosters combined in a soft-voting ensemble, and SHAP used to explain what the model actually keys on. Now being extended into a comparative research paper on explainable ML.</p>
+    </article>
+
+    <article class="card">
+      <h3>Voice Intent Classifier</h3>
+      <div class="stack">Whisper · BERT · PyTorch</div>
+      <p>Speech in, intent out. Whisper transcribes the audio, a fine-tuned BERT classifier maps the transcript onto intent labels — the front half of any voice-driven assistant.</p>
+    </article>
+
+    <article class="card">
+      <h3>CNN Image Classifier</h3>
+      <div class="stack">PyTorch · CIFAR-10 · Flask</div>
+      <p>A convolutional network trained on CIFAR-10 on a Colab T4 GPU, then wrapped in a Flask interface so predictions run in a browser rather than a notebook.</p>
+    </article>
+
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Sketchbook</p>
+  <h2 class="section-title">Ideas in the pipeline</h2>
+  <p class="lede">Things I'm poking at — some will become real, some won't.</p>
+  <div class="chips">
+    <span class="chip">Low-cost AI glasses</span>
+    <span class="chip">Siliguri Connect</span>
+    <span class="chip">Creator collaboration app</span>
+    <span class="chip">Offline screenshot &amp; photo organiser</span>
+    <span class="chip">Personal AI day planner</span>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Off the keyboard</p>
+  <h2 class="section-title">Teaching &amp; content</h2>
+  <div class="feature">
+    <div>
+      <h3 style="font-size:1.25rem;margin-bottom:10px">Study with Afzal</h3>
+      <ul>
+        <li>Short-form educational video on Instagram and YouTube Shorts.</li>
+        <li>AI tools, study strategy, and how to actually get through a syllabus.</li>
+        <li>Written, shot and edited solo — the whole production pipeline is mine.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:1.25rem;margin-bottom:10px">Private tutoring</h3>
+      <ul>
+        <li>Three years teaching Science, Maths, Social Science and English, in person and online.</li>
+        <li>Physics, Chemistry and Biology through the senior school grades.</li>
+        <li>An independent practice: outreach, scheduling, lesson design and tracking progress.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Toolkit</p>
+  <h2 class="section-title">What I work with</h2>
+  <div class="skills">
+    <div class="skillrow"><b>Languages</b><span>Python · JavaScript · SQL</span></div>
+    <div class="skillrow"><b>ML &amp; Data</b><span>PyTorch · scikit-learn · XGBoost · LightGBM · CatBoost · Optuna · SMOTE · SHAP · pandas · NumPy</span></div>
+    <div class="skillrow"><b>AI Systems</b><span>LangChain · LangGraph · ChromaDB · RAG · BERT · Whisper · OpenCV · Ollama</span></div>
+    <div class="skillrow"><b>Engineering</b><span>Flask · React · SQLite · REST APIs · Playwright · Git · Google Colab</span></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Background</p>
+  <h2 class="section-title">Education</h2>
+  <div class="edu">
+    <div class="item">
+      <h3>B.Sc. Data Science &amp; Artificial Intelligence</h3>
+      <div class="meta">IIT Guwahati · Mehta Family School of DS&amp;AI · 2023 – 2027</div>
+    </div>
+    <div class="item">
+      <h3>Nepal AI School 2025</h3>
+      <div class="meta">Participant</div>
+    </div>
+    <div class="item">
+      <h3>Research in progress</h3>
+      <div class="meta">Comparative study of gradient-boosting models with SHAP explainability on health survey data</div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="contact">
+  <p class="eyebrow">Say hello</p>
+  <h2 class="section-title">Contact</h2>
+  <p class="lede">Internships, collaborations, tutoring enquiries — all welcome.</p>
+  <div class="contacts">
+    <a href="mailto:h.afzal@op.iitg.ac.in"><span>Email</span><span>h.afzal@op.iitg.ac.in</span></a>
+    <a href="https://linkedin.com/in/afzu01" target="_blank" rel="noopener"><span>LinkedIn</span><span>linkedin.com/in/afzu01</span></a>
+    <a href="https://github.com/Afzu01" target="_blank" rel="noopener"><span>GitHub</span><span>github.com/Afzu01</span></a>
+    <a href="tel:+918391957377"><span>Phone</span><span>+91 83919 57377</span></a>
+  </div>
+
+  <form id="contactForm">
+    <div>
+      <label for="name">Your name</label>
+      <input id="name" type="text" placeholder="Name" required>
+    </div>
+    <div>
+      <label for="email">Your email</label>
+      <input id="email" type="email" placeholder="you@example.com" required>
+    </div>
+    <div>
+      <label for="msg">Message</label>
+      <textarea id="msg" placeholder="What would you like to talk about?" required></textarea>
+    </div>
+    <button type="submit">Send message</button>
+    <p class="note">This opens your own mail app with the message ready to send.</p>
+  </form>
+</section>
+
+</main>
+
+<footer class="wrap">
+  © <span id="yr">2026</span> Afzal Hussain · Siliguri, West Bengal, India
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = document.getElementById('name').value.trim();
+    var em = document.getElementById('email').value.trim();
+    var m = document.getElementById('msg').value.trim();
+    var subject = encodeURIComponent('Portfolio enquiry from ' + n);
+    var body = encodeURIComponent(m + '\n\n—\n' + n + '\n' + em);
+    window.location.href = 'mailto:h.afzal@op.iitg.ac.in?subject=' + subject + '&body=' + body;
+  });
+</script>
+</body>
+</html>
